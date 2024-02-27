@@ -1,0 +1,14 @@
+ if (timeToken < 10) {
+                                        secondCounting.innerText = `0${timeToken}`;
+                                    } else if (timeToken >= 10 && timeToken <= 59) {
+                                        secondCounting.innerText = `${timeToken}`;
+                                    } else if (timeToken > 59) {
+                                        hourToken++;
+                                        timeToken = "00";
+                                        secondCounting.innerText = "00";
+                                        if (hourToken < 10) {
+                                            firstCounting.innerText = `0${hourToken}`;
+                                        } else if (hourToken >= 10 && hourToken <= 59) {
+                                            firstCounting.innerText = `${hourToken}`;
+                                        }
+                                    }

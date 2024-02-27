@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 755px;
+}
+
+/* First Page */
+
+#Container{
+    border: 2px solid;
+    height: 600px;
+    width: 350px;
+    background-color: rgb(253, 247, 239);
+    position: absolute;
+    z-index: 0;
+    background: url("outerbackImg.jpg");
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+#boxContainer{
+    position: absolute;
+    z-index: 20;
+}
+
+#logo{
+    margin-top: 230px;
+    margin-left: 120px;
+    display: inline-block;
+    position: absolute;
+    z-index: 20;
+}
+
+#lineAnimation{
+    height: 3.5px;
+    border-radius: 6px;
+    width: 0px;
+    margin-top: 350px;
+    margin-left: 97px;
+    background: linear-gradient(90deg, rgba(241,108,135,1) 20%, rgba(234,236,183,1) 49%, rgba(198,74,255,1) 76%);
+}
+
+/* Icons */
+
+#icons{
+    display: flex;
+    justify-content: space-between;
+    width: 310px;
+    height: 50px;
+    position: absolute;
+    z-index: 20;
+    margin-top: 550px;
+    margin-left: 16px;
+}
+
+#homeIcon:hover, #searchIcon:hover, #playlistIcon:hover, #recentlyIcon:hover{
+    cursor: pointer;
+}
+
+#home, #search, #playlist, #recent{
+    font-size: 12px;
+}
+
+/* Recommended Radio */
+
+#heading1{
+    position: absolute;
+    z-index: 1;
+    margin-top: 90px;
+    margin-left: 20px;
+}
+
+#album{
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 100px;
+    margin-top: 130px;
+}
+
+#firstInnerAlbum{
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    opacity: 0.8;
+}
+
+#secondInnerAlbum{
+    width: 107px;
+    height: 107px;
+    border: 4px solid;
+    border-radius: 3px;
+}
+
+#thirdInnerAlbum{
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+
+#singer{
+    height: 20px;
+    width: 150px;
+    position: absolute;
+    z-index: 4;
+    margin-top: 110px;
+    margin-left: 98px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Next And Previous */
+
+#nextArrow{
+    position: absolute;
+    z-index: 2;
+    height: 30px;
+    width: 30px;
+    transform: translate(290px, 165px);
+    background: rgba(126, 113, 113, 0.452);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#prevArrow{
+    position: absolute;
+    z-index: 2;
+    height: 30px;
+    width: 30px;
+    transform: translate(35px,165px);
+    background: rgba(126, 113, 113, 0.452);
+    border-radius: 50%;
+    padding: 7px;
+}
+
+/* Recommended Inner AlbumList */
+
+#innerDiv1{
+    height: 597px;
+    width: 0px;
+    position: absolute;
+    z-index: 10;
+    background: url("outerbackImg.jpg");
+    background-color: rgb(253, 247, 239);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+#imgContainer{
+    display: none;
+    width: 140px;
+    height: 140px;
+    margin-top: 70px;
+    margin-left: 75px;
+}
+
+#backArrow{
+    display: none;
+    transform: translate(30px,-110px);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background: rgba(126, 113, 113, 0.452);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Favourite MusicList And All Played Songs */
+
+#fav{
+    margin-top: 184px;
+    margin-left: -221px;
+    position: absolute;
+    z-index: 100;
+    height: 30px;
+    width: 30px;
+    display: none;
+}
+
+
+.redHeart{
+    background: red;
+}
+
+#heartImg{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 105px;
+    border-bottom-right-radius: 110px;
+}
+
+
+#playAll{
+    display: none;
+    margin-left: 23px;
+    transform: translateY(10px);
+}
+
+#playAll:hover{
+    cursor: pointer;
+}
+
+#songList{
+    height: 310px;
+    width: 347px;
+    margin-top: 10px;
+    display: none;
+    padding: 10px;
+    overflow-y: scroll;
+    font-size: 13px;
+}
+
+.songs{
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-15px);
+}
+
+.songs:hover{
+    cursor: pointer;
+    color: rgb(45, 175, 45);
+}
+
+/* Recently Played MusicList */
+
+#heading2{
+    position: absolute;
+    z-index: 1;
+    margin-top: 280px;
+    margin-left: 20px;
+}
+
+#see{
+    position: absolute;
+    z-index: 2;
+    margin-top: 280px;
+    margin-left: 280px;
+    color: rgb(10, 124, 185);
+    display: none;
+}
+
+#see:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#album2{
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 100px;
+    margin-top: 320px;
+}
+
+#firstInnerAlbum2{
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    opacity: 0.8;
+}
+
+#secondInnerAlbum2{
+    width: 107px;
+    height: 107px;
+    border: 4px solid;
+    border-radius: 3px;
+}
+
+#thirdInnerAlbum2{
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+
+#singer2{
+    height: 20px;
+    width: 150px;
+    position: absolute;
+    z-index: 4;
+    margin-top: 110px;
+    margin-left: 98px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Recently Inner2 AlbumList */
+
+#innerDiv2{
+    height: 597px;
+    width: 0px;
+    position: absolute;
+    z-index: 10;
+    background: url("outerbackImg.jpg");
+    background-color: rgb(253, 247, 239);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+#imgContainer2{
+    display: none;
+    width: 140px;
+    height: 140px;
+    margin-top: 70px;
+    margin-left: 75px;
+    border: 2px solid;
+}
+
+#backArrow2{
+    display: none;
+    transform: translate(30px,-110px);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background: rgba(126, 113, 113, 0.452);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Favourite MusicList And All Played Songs - Recently Album */
+
+#fav2{
+    margin-top: 184px;
+    margin-left: -221px;
+    position: absolute;
+    z-index: 100;
+    height: 30px;
+    width: 30px;
+    display: none;
+}
+
+
+.redHeart{
+    background: red;
+}
+
+#heartImg2{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 105px;
+    border-bottom-right-radius: 110px;
+}
+
+
+#playAll2{
+    display: none;
+    margin-left: 23px;
+    transform: translateY(10px);
+}
+
+#songList2{
+    height: 310px;
+    width: 347px;
+    margin-top: 10px;
+    display: none;
+    padding: 10px;
+    overflow-y: scroll;
+    font-size: 13px;
+    border: 2px solid;
+}
+
+#recentlyIcon:hover, #homeIcon:hover, #searchIcon:hover, #playlistIcon:hover{
+    cursor: pointer;
+}
+
+/* SearchBar Music Div */
+
+#searchBar{
+    height: 28px;
+    width: 320px;
+    padding-left: 40px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 4px;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 13px;
+    margin-top: 50px;
+}
+
+#searchImg{
+    position: absolute;
+    z-index: 3;
+    margin-left: 30px;
+    margin-top: 53px;
+}
+
+#innerDiv3{
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+
+#searchHeading{
+    font-size: 20px;
+    position: absolute;
+    z-index: 3;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: 600;
+    width: 100px;
+    display: none;
+}
+
+#innerDiv4{
+    height: 0px;
+    width: 347px;
+    position: absolute;
+    z-index: 10;
+    background: url("outerbackImg.jpg");
+    background-color: rgb(253, 247, 239);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+#searchResult{
+    position: absolute;
+    z-index: 3;
+    width: 300px;
+    height: 450px;
+    margin-top: 85px;
+    margin-left: 22px;
+    padding-left: 10px;
+    padding-top: 5px;
+    display: none;
+}
+
+#emptyImg{
+    width: 130px;
+    height: 100px;
+    margin-left: 75px;
+    position: absolute;
+    z-index: 4;
+    display: none;
+}
+
+#noResultFound{
+    position: absolute;
+    z-index: 4;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: -37px;
+    display: none;
+}
+
+#Img100{
+    position: absolute;
+    z-index: 4;
+    display: none;
+}
+
+/* recentHistorySongs - searchbox */
+
+#recentHistorySongs{
+    position: absolute;
+    z-index: 4;
+    width: 300px;
+    height: 240px;
+    margin-top: 210px;
+    margin-left: -9px;
+    overflow-y: scroll;
+    display: none;
+}
+
+#recentHistoryHeading{
+    position: absolute;
+    z-index: 4;
+    width: 300px;
+    height: 50px;
+    margin-top: 150px;
+    margin-left: -9px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    display: none;
+}
+
+.songHistoryContainerArray{
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-15px);
+    font-size: 13px;
+}
+
+.songHistoryContainerArray:hover{
+    cursor: pointer;
+    color: rgb(45, 175, 45);
+}
+
+#searchProgress{
+    position: absolute;
+    z-index: 4;
+    width: 315px;
+    height: 50px;
+    margin-left: -17px;
+    display: none;
+}
+
+.songHistoryContainer{
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-7.5px);
+}
+
+.indexing{
+    font-size: 20px;
+}
+
+/* <!-- Music Screen - MizMusic --> */
+
+#innerDiv5{
+    height: 0px;
+    width: 347px;
+    position: absolute;
+    z-index: 11;
+    background: url("outerbackImg.jpg");
+    background-color: rgb(253, 247, 239);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+#imgMusic{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 40px;
+    margin-left: 50px;
+    pointer-events: none;
+    display: none;
+}
+
+#downIcon{
+    position: absolute;
+    z-index: 11;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: none;
+}
+
+#downIcon:hover{
+    cursor: pointer;
+}
+
+#musicName{
+    width: 285px;
+    height: 30px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 300px;
+    font-size: 16px;
+    margin-left: 50px;
+    font-weight: 600;
+    pointer-events: none;
+    display: none;
+}
+
+#singBy{
+    width: 285px;
+    height: 30px;
+    position: absolute;
+    z-index: 11;
+    font-size: 14px;
+    margin-top: 322px;
+    margin-left: 50px;
+    pointer-events: none;
+    display: none;
+}
+
+#fav3{
+    margin-top: 304px;
+    margin-left: 300px;
+    position: absolute;
+    z-index: 101;
+    height: 30px;
+    width: 30px;
+    display: none;
+}
+
+#heartImg3{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 105px;
+    border-bottom-right-radius: 110px;
+}
+
+#songLine{
+    width: 250px;
+    background-color: rgba(160, 158, 158, 0.621);
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 350px;
+    margin-left: 50px;
+    display: none;
+}
+
+#progressBar{
+    width: 0px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 1px;
+    border-radius: 5px;
+    height: 2.6px;
+    background: linear-gradient(90deg, rgba(241,108,135,1) 20%, rgba(234,236,183,1) 49%, rgba(198,74,255,1) 76%);
+    display: none;
+}
+
+#circleBar{
+    width: 12px;
+    height: 12px;
+    margin-top: -4.6px;
+    transform: translateX(8px);
+    margin-right: 4px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(241,108,135,1) 20%, rgba(234,236,183,1) 49%, rgba(198,74,255,1) 76%);
+    float: right;
+}
+
+#circleBarHidden{
+    width: 1px;
+    height: 1px;
+    margin-top: 0.5px;
+    margin-left: -7.5px;
+    transform: translateX(8px);
+    margin-right: 4px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgb(108, 241, 166) 20%, rgba(234,236,183,1) 49%, rgba(198,74,255,1) 76%);
+    float: left;
+}
+
+
+
+#timeIncrement{
+    width: 80px;
+    height: 25px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 360px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+}
+
+#timeDecrement{
+    width: 80px;
+    height: 25px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 240px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 11;
+    display: none;
+}
+
+#prevSong{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 390px;
+    margin-left: 60px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#playSong{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 390px;
+    margin-left: 150px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#nextSong{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 11;
+    margin-top: 390px;
+    margin-left: 240px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}

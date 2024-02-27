@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miz Music</title>
+    <link rel="icon" href="logo.png" type="image/icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/65a1611461.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="Container">
+
+            <!-- First Page -->
+    
+            <div id="boxContainer">
+                <div id="logo">
+                    <img src="logo.png" alt="" id="logoImg" height="90px">
+                </div>
+                <div id="lineAnimation"></div>
+            </div>
+
+            <!-- Recommended Radio -->
+
+            <div id="heading1">
+                <h3 id="heading_1">Recommended radio</h3>
+            </div>
+            <div id="nextArrow" class="arrow">
+                <img src="nextArrow.png" width="30px">
+            </div>
+            <div id="prevArrow" class="arrow">
+                <img src="prev.png" width="25px">
+            </div>
+            <div id="album">
+                <div id="firstInnerAlbum" class="singerAlbum">
+                    <img src="sidhuWallpaper.jpg" height="100px" width="100px">
+                </div>
+                <div id="secondInnerAlbum" class="singerAlbum">
+                    <img src="khan.jpg" height="100px" width="100px">
+                </div>
+                <span id="singer">Khan Bhaini</span>
+                <div id="thirdInnerAlbum" class="singerAlbum">
+                    <img src="honey.jpg" height="100px" width="100px">
+                </div>
+            </div>
+
+            <!-- Recently Played -->
+
+            <div id="heading2">
+                <h3 id="heading_2">Recently Played</h3>
+            </div>
+            <div id="see">See All</div>
+            <div id="album2">
+                <div id="firstInnerAlbum2" class="singerAlbum2">
+                    <img src="sidhuWallpaper.jpg" height="100px" width="100px">
+                </div>
+                <div id="secondInnerAlbum2" class="singerAlbum2">
+                    <img src="khan.jpg" height="100px" width="100px">
+                </div>
+                <span id="singer2"></span>
+                <div id="thirdInnerAlbum2" class="singerAlbum2">
+                    <img src="honey.jpg" height="100px" width="100px">
+                </div>
+            </div>
+
+            <!-- ICONS -->
+
+            <div id="icons">
+                <div id="homeIcon">
+                    <center><i class="fa-solid fa-house fa-lg"></i></center>
+                    <center><span id="home">Home</span></center>
+                </div>
+                <div id="searchIcon">
+                    <center><i class="fa-solid fa-magnifying-glass"></i></center>
+                    <center><span id="search">Search</span></center>
+                </div>
+                <div id="playlistIcon">
+                    <center><i class="fa-solid fa-list"></i></center>
+
+                    <center><span id="playlist">Playlist</span></center>
+                </div>
+                <div id="recentlyIcon">
+                    <center><i class="fa-solid fa-clock-rotate-left"></i></center>
+                    <center><span id="recent">Recent</span></center>
+                </div>
+            </div>
+
+            <!-- Recommended Inner Music AlbumList -->
+
+            <div id="innerDiv1">
+                <div id="backArrow">
+                    <i class="fa-solid fa-chevron-left fa-lg"></i>
+                </div>
+                <div id="imgContainer">
+                </div>
+                <div id="fav">
+                    <img src="heart.png" alt="" width="25px" height="20px" id="heartImg">
+                </div>
+                <div id="playAll">
+                    <img src="playImg.png" alt="" width="45px">
+                </div>
+                <div id="songList"></div>
+            </div>
+
+            <!-- Recent Inner SongsLists -->
+
+            <div id="innerDiv2">
+                <div id="backArrow2">
+                    <i class="fa-solid fa-chevron-left fa-lg"></i>
+                </div>
+                <div id="imgContainer2">
+                </div>
+                <div id="fav2">
+                    <img src="heart.png" alt="" width="25px" height="20px" id="heartImg2">
+                </div>
+                <div id="playAll2">
+                    <img src="playImg.png" alt="" width="45px">
+                </div>
+                <div id="songList2"></div>
+            </div>
+
+            <!-- Search_Bar_Screen_for_Music -->
+   
+            <div id="innerDiv4">
+                <div id="searchHeading">Search</div>
+                <div id="innerDiv3">
+                    <div id="searchImg"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <input type="text" placeholder="What do you want to listen to?" id="searchBar">
+                </div>
+                <div id="searchResult">
+                    <div id="searchProgress"></div>
+                    <div id="emptyImg">
+                        <img src="alien.gif" alt="" width="130px" height="100px" id="Img100">
+                        <span id="noResultFound"><center>No Result Found</center></span>
+                    </div>
+                    <div id="recentHistoryHeading">Recent Searched Songs</div>
+                    <div id="recentHistorySongs"></div>
+                </div>
+            </div>
+
+            <!-- Music Screen - MizMusic -->
+
+            <div id="innerDiv5">
+                <div id="downIcon"><img src="down.png" alt="" height="10px"></div>
+                <div id="imgMusic"></div>
+                <div id="fav3">
+                    <img src="heart.png" alt="" width="25px" height="20px" id="heartImg3">
+                </div>
+                <span id="musicName"></span>
+                <span id="singBy"></span>
+                <div id="songLine">
+                    <div id="progressBar">
+                        <span id="circleBarHidden"></span>
+                        <span id="circleBar"></span>
+                    </div>
+                </div>
+                <div id="timeIncrement"><span id="firstCounting">00</span> : <span id="secondCounting">00</span></div>
+                <div id="timeDecrement">-<span id="firstDecrementCounting">00</span> : <span id=zeroIndicator></span><span id="secondDecrementCounting">00</span></div>
+                <div id="prevSong"><i class="fa-solid fa-backward-step fa-xl"></i></div>
+                <div id="playSong"><i class="fa-solid fa-circle-pause fa-2xl"></i></div>
+                <div id="nextSong"><i class="fa-solid fa-forward-step fa-xl"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="songsArray.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
